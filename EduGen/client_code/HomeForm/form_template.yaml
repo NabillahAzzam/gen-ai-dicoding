@@ -1,0 +1,32 @@
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html', visible: true, foreground: 'theme:Primary 500'}
+  data_bindings: []
+components:
+- type: FlowPanel
+  properties: {visible: false}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+- name: title_lbl
+  properties: {text: EduGen}
+  type: Label
+  layout_properties: {slot: title}
+- name: card_1
+  properties: {role: card, col_widths: '{"UUNHUE":45,"UJMRAK":15}'}
+  type: ColumnPanel
+  layout_properties: {slot: default}
+  components:
+  - name: text_box_1
+    properties: {placeholder: Prompt here.......}
+    type: TextBox
+    layout_properties: {grid_position: 'PYMXCM,UUNHUE'}
+  - name: button_1
+    properties: {text: Submit, spacing_above: none, spacing_below: none, align: center, icon: 'fa:arrow-circle-right', role: primary-color, background: '#35485c'}
+    type: Button
+    layout_properties: {grid_position: 'PYMXCM,UJMRAK', full_width_row: false}
+    event_bindings: {click: button_1_click}
+  - name: answer_label
+    properties: {spacing_above: large, visible: true, background: '', foreground: '#000000', role: text}
+    type: Label
+    layout_properties: {grid_position: 'JJEVDE,UKNVWN'}
+is_package: true
