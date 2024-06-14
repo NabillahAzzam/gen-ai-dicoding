@@ -1,0 +1,7 @@
+Django
+djangorestframework
+google-cloud-storage
+transformers
+torch
+pymilvus
+gunicorn
